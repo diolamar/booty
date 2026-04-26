@@ -40,7 +40,7 @@ Reset feature when all C1-C7 is gray, set 280 seconds, after that back to normal
 
 ->Hybrid Betting Update From Martingale to Fibonacci that is 5, 15, 35, 75, 155, 315, 635, 1275, 2555, 3830, 6385, 10215, 16600
 	-> 1 - 9 = Martingale
-                    -> 10 - 13 = Fibonacci
+    -> 10 - 13 = Fibonacci
 -> Bug Fixed in detecting Gray color
 -> Fixed c_type_color error when running as EXE
 -> Removed all log files in logs/, and replaced with terminal.log

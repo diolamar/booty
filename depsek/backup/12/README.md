@@ -53,7 +53,7 @@ Reset feature when all C1-C7 is gray, set 280 seconds, after that back to normal
 ->Joining in the middle of the game will count all valid columns for sample decision
 
 
-bet_dep_03_AL_MART-FIB v5.X.exe
+bet_dep_03_AL_MART-FIB v5.3.exe
 
 
 

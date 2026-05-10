@@ -1,8 +1,0 @@
- To get the value: from dropdown 
-
-type = request.form.get('type')
-
-
-
-
-

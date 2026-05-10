@@ -1,1 +1,0 @@
-https://stackoverflow.com/questions/61350872/flask-pdfkit-unable-to-add-custom-font

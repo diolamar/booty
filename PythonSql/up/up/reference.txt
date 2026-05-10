@@ -1,1 +1,0 @@
-https://pynative.com/python-mysql-blob-insert-retrieve-file-image-as-a-blob-in-mysql/

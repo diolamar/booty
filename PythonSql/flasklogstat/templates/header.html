@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+    <title>Crud Application</title>
+    <!--<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">-->
+    <!--<link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">-->
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'teacher.png' )}}">
+    <meta name="pdfkit-page-size" content="Legal"/>
+    <meta name="pdfkit-orientation" content="Landscape"/>
+</head>
+
+<body>
+
+
+<div class="container" style="background-color: gray; height: 22%;">
+ 
+    <div class="well" style="margin-top: 14px;">
+
+        <h1 align="center" style="font-weight: bold;">PN Services</h1>
+
+    </div>
+</div>
+
+
+<!--
+[ 
+            {
+                // Change type to "doughnut", "line", "splineArea", etc.
+                type: "column",
+                labelAngle:0,
+                dataPoints: [
+              {% for item in x %}
+              {label: "{{ item.1 }}", 
+              y: {{item.3}}},
+              {% endfor %}								
+                ]  -->

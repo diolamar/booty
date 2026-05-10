@@ -1,0 +1,48 @@
+{% include "header.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+<link rel=stylesheet href="{{ url_for('static', filename='style.css') }}" />
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+		   <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  {% include "footer.html" %}
+      <div>
+        <a href="../static/doc.pdf">My Resume</a>
+      </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+<script src="../static/js/canvasjs.min.js"></script>
+
+<script type="text/javascript">
+  window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer", {
+          title:{
+              text: "Monthly Top 10 Country Attackers"              
+          },
+          data: [ 
+          {
+              // Change type to "doughnut", "line", "splineArea", "bar", "area", "pie" etc.
+              type: "line",
+              labelAngle:0,
+              dataPoints: [
+            {% for item in x %}
+            {label: "{{ item.1 }}",
+            labelFontWeight: "bold",
+            labelFontSize: 15, 
+            y: {{item.3}},
+            indexLabel: "{{ item.3 }}" , 
+            indexLabelFontColor: "indigo"},
+            {% endfor %}								
+              ]
+          } 
+          ]
+      });
+      chart.render();
+  }
+  </script>

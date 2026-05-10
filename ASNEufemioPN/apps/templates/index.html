@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-center my-sm-4">
+        <div class="list-group" style="width: 100%;">
+            <li class="list-group-item bg-secondary text-white">
+                <div class="d-flex w-100 justify-content-between align-middle p-sm-1">
+                    <h5>List Of Death</h5>
+                    <a href="{{url_for('view.new')}}" class="btn btn-primary"><i class="glyphicon glyphicon-plus">Add</i></a>
+                </div>
+            </li>
+           
+         
+                  <table class="table table-bordered">
+                    <thead>
+                    <tr style="font-weight: bolder;">
+                      <td>Fullname</td>
+                      <td>Age</td>
+                      <td>gender</td>
+                      <td>Place of Death</td>
+                      <td>Cause of death</td>
+                      <td>Action</td>                    
+                    </tr>
+                  </thead>
+                    {% for item in todo %}
+                  <tbody>
+                    <tr style="font-style: italic;">
+                      <td>{{item.fullname}}</td>
+                      <td>{{item.age}}</td>
+                      <td>{{item.gender}}</td>
+                      <td>{{item.placeofdeath}}</td>
+                      <td>{{item.causeofdeath}}</td>
+                      <td><a href="{{url_for('view.update',_id = item.id)}}" class="btn btn-warning">Update</td>                   
+                    </tr>
+                  </tbody>
+                  {%endfor%}
+                  </table>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

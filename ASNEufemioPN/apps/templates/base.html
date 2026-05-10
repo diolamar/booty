@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+    <!-- FontAwsome icons -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% endblock %}
+
+    <title>Inloving Memory</title>
+    {% endblock %}
+</head>
+
+<body style="background-color: whitesmoke;">
+    <!-- Your page content -->
+    <div class="container-fluid">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    {% block scripts %}
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" rel="stylesheet"></script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block title %}Dashboard{% endblock %} {% block
+content %}
+<h2>Welcome, {{ current_user.email }}</h2>
+<a href="{{ url_for('add_subscription') }}" class="btn btn-success"
+  >Add Subscription</a
+>
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for sub in subscriptions %}
+    <tr>
+      <td>{{ sub.name }}</td>
+      <td>${{ sub.price }}</td>
+      <td>
+        <a
+          href="{{ url_for('edit_subscription', id=sub.id) }}"
+          class="btn btn-warning btn-sm"
+          >Edit</a
+        >
+        <form
+          action="{{ url_for('delete_subscription', id=sub.id) }}"
+          method="POST"
+          class="d-inline"
+        >
+          <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

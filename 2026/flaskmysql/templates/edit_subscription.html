@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block title %}Edit Subscription{% endblock %} {%
+block content %}
+<div class="col-md-6 mx-auto">
+  <h2>Edit Subscription</h2>
+  <form method="POST">
+    <div class="mb-3">
+      <label>Name</label>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        value="{{ sub.name }}"
+      />
+    </div>
+    <div class="mb-3">
+      <label>Price</label>
+      <input
+        type="number"
+        name="price"
+        step="0.01"
+        class="form-control"
+        value="{{ sub.price }}"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
+{% endblock %}

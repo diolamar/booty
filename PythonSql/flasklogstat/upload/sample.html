@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.address}}</td>
+            </tr>
+            { endfor }
+        </tbody>
+</table>
+{{ paginate.links }}

@@ -1,0 +1,42 @@
+
+ select ip.country from annualweb an, lookips ip where (INET_ATON("0.0.1.1") BETWEEN INET_ATON(ip.start) AND INET_ATON(ip.end)) LIMIT 1;
+
+ select ip.country from annualweb an, lookips ip where (INET_ATON("0.0.1.1") = INET_ATON(ip.start) AND INET_ATON(ip.end)) LIMIT 1;
+
+
+
+
+select ip.country, an.activities, an.address from month an, lookips ip where (INET_ATON(an.address) BETWEEN INET_ATON(ip.start) AND INET_ATON(ip.end));
+
+
+						OK
+select ip.country, an.activities, an.address from month an, lookips ip where (INET_ATON(an.address) BETWEEN INET_ATON(ip.start) AND INET_ATON(ip.end));
+
+
+DISTINCT
+
+
+
+SELECT c.country, an.address from month an, lookips ip, country c where (INET_ATON(an.address) BETWEEN INET_ATON(ip.start) AND INET_ATON(ip.end) AND ip.country=c.alphatwocode)
+
+
+
+to output data from another page
+
+pip install simplejson
+import simplejson as json
+
+pip install requirements
+
+
+
+
+
+                                             find min max
+SELECT an.id, ip.country, an.activities, sum(an.hits) AS hits, MAX(an.hits) as maxx, MIN(an.hits) as minn from month an, ipv4 ip where (INET_ATON(an.address) BETWEEN INET_ATON(ip.start) AND INET_ATON(ip.end))GROUP BY ip.country ORDER BY hits DESC LIMIT 10;
+
+
+pip install matplotlib
+from matplotlib import pyplot as plt
+
+

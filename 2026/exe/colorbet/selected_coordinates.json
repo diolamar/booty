@@ -1,0 +1,16 @@
+{
+  "selected_preset": "Default",
+  "presets": {
+    "Default": {
+      "name": "Default",
+      "image": "browser_capture.png",
+      "x": 34,
+      "y": 364,
+      "width": 72,
+      "height": 18,
+      "center_x": 70,
+      "center_y": 373,
+      "source": "browser_capture"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+
+{% include "header.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">-->
+<!--<link href="../static/css/page.css" rel="stylesheet">-->
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+
+
+         <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+              <!-- <a class="navbar-brand" href=sumar>Summary</a>-->
+               <!-- Brand and toggle get grouped for better mobile display -->
+               <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                 </button>
+                 
+               </div>
+               <!-- Collect the nav links, forms, and other content for toggling -->
+               <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                
+                 <ul class="nav navbar-nav navbar-left">
+                  
+                 </ul>
+                 <ul class="nav navbar-nav navbar-right">
+                   <li><a href=charty>Chart</a></li>
+                   <li><a href=bar>Bar</a></li>
+                   <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                       <li><a href=../#>Home</a></li>
+                       <li><a href="#">Another action</a></li>
+                       <li><a href="#">PNC2</a></li>
+                       <li><a href="#">PN Web</a></li>
+                       <li><a href="#">PN Mail</a></li>
+                       <li class="divider"></li>
+                       <li><a href="sumar">Summary</a></li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div><!-- /.navbar-collapse -->
+           </div><!-- /.navbar-container -->
+           </nav>
+           
+            <table class="table table-hover">
+            <tr>
+              <th>Address</th>
+              <th>Country</th>
+
+            </tr>
+                {% for row in ip %}
+                <tr> 
+                    <td>{{row.0}}</td>
+                    <td>{{row.1}}</td>
+   
+                </tr>
+        {% endfor  %}
+
+</tbody>
+</table>
+  {% include "footer.html" %}
+    </div>
+</div>
+</div>
+{% endblock %}
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>

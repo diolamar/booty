@@ -1,0 +1,17 @@
+<h1>TOXIC</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i.0}}</td>
+                <td>{{i.1}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>

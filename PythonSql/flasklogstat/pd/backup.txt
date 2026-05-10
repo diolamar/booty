@@ -1,0 +1,42 @@
+
+
+
+
+import pdfkit
+import os
+config = pdfkit.configuration(wkhtmltopdf='C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe')
+
+ #  return render_template('index.html',)
+   # pdfkit.from_url('index.html', 'out-test.pdf', configuration=config)
+   # pdfkit.from_string("FLASKY TOXIC", "string.pdf")
+   # pdfkit.from_file("index.html")
+   # return render_template('index.html')
+
+
+   @app.route('/pdd')
+def pdd():
+    pdfkit.from_url('http://127.0.0.1:5000/bar', 'out-test.pdf', configuration=config)
+    return redirect(url_for('bar')) 
+@app.route('/pdf')
+def pdf():
+    path_wkhtmltopdf = 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'
+    config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
+    rendered=render_template('http://127.0.0.1:5000/bar.html',test='hi')
+    #cssPath=['static/css/resumeCss.css']
+    pdf=pdfkit.from_string(rendered, False,configuration=config)
+    response=make_response(pdf)
+    response.headers['Content-Type']='application/pdf'
+    # response.headers['Content-Disposition']='attachment; filename=Print Me.pdf'
+    response.headers['Content-Disposition']='inline'
+    return response
+
+
+<h1>flasky toxicity</h1>
+<!doctype html>
+<title>Hello</title>
+{% for x in name %}
+    {{x}}
+{% endfor %}
+<a href="/pdf">Get A PDF</a>
+
+

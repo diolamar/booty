@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Crud Application</title>
+    <!--<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">-->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="{{url_for('static', filename = 'teacher.png' )}}">
+</head>
+<body>
+<div class="container">
+    <div class="well text-center" style="width:102.5%"> <!-- -->
+        <h1>Cyber Incident Report</h1>
+    </div>
+   <!-- <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>-->
+    <script type="text/javascript" src="../static/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+    $("#tests").click(function(){
+
+       $('#myModa').modal('hide');
+      // $('#mod').modal('show');
+    }); 
+});
+    </script>
+  <!--  $('.yourButton').click(function(e){
+        e.preventDefault();
+
+        $('#yourFirstModal')
+            .modal('hide')
+            .on('hidden.bs.modal', function (e) {
+                $('#yourSecondModal').modal('show');
+
+                $(this).off('hidden.bs.modal'); // Remove the 'on' event binding
+            });
+
+    });
+
+
+
+
+<a href="#" data-target="#my_modal" data-toggle="modal" class="identifyingClass" data-id="my_id_value">Open Modal</a>
+
+<div class="modal fade" id="my_modal" tabindex="-1" role="dialog" aria-labelledby="my_modalLabel">
+<div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal Title</h4>
+        </div>
+        <div class="modal-body">
+            Modal Body
+            <input type="hidden" name="hiddenValue" id="hiddenValue" value="" />
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary">Yes</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $(".badge").click(function(e){
+            e.preventDefault();
+           // id = id.val();
+
+            $('#myModal')
+            .modal('hide')
+            .on('hidden.bs.modal', function (e) {
+                $('#myModa').modal('show');
+
+                $(this).off('hidden.bs.modal'); // Remove the 'on' event binding
+            });
+
+          //  var my_id_value = $(this).data('id');
+           // $(".modal-body #hiddenValue").val(my_id_value);
+
+        })
+    });
+</script>
+
+
+-->
